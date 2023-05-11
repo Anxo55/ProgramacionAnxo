@@ -53,9 +53,15 @@ public class Test {
         equipo1.ordenaTiempo();
         equipo2.ordenaTiempo();
 
-        System.out.println("clasificacion general ordenada");
         giro.clasificacionCiclistas();
-        System.out.println(giro.clasificacion.toString());
+        System.out.println("clasificacion general ordenada");
+        System.out.println("-----------------");
+        giro.imprimirClasificacion();
+
+        System.out.println("Clasificacion por equipos ordenada");
+        System.out.println("------------------");
+        giro.clasificacionEquipos();
+        giro.listarEquipo();
 
     }
 

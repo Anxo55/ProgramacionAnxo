@@ -94,6 +94,7 @@ public class Carrera {
                 }
             }
             Collections.sort(clasificacion, new Comparator<Ciclista>(){
+                @Override
                 public int compare(Ciclista c1, Ciclista c2 ){
                     return c1.getTiempoAcumulado()- c2.getTiempoAcumulado();
                 }
@@ -108,6 +109,11 @@ public class Carrera {
                     + ", clasificacion=" + clasificacion + "]";
         }
 
-        
+        public void imprimirClasificacion() {
+            ListIterator<Ciclista> iter = clasificacion.iterator();
+            while(iter.hasNext()) {
+                iter.next().imprimirTipo();
+            }
+        }
 
 }
