@@ -50,5 +50,11 @@ public class Asignatura implements Serializable{
             System.out.println("Error al leer al archivo");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Asignatura [codigo=" + codigo + ", nombre=" + nombre + ", creditos=" + creditos + "]";
+    }
+    
 }
 
