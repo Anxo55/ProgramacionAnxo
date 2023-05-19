@@ -4,33 +4,23 @@ import java.util.ArrayList;
 
 public class ListaPersonas {
     ArrayList<Persona> listaPersonas;
-    public void listaPersonas(){
-        listaPersonas= new ArrayList<>();
+    public ListaPersonas(){
+    listaPersonas = new ArrayList<>();
     }
-    public void añadirPersona(Persona p){
-        listaPersonas.add(p);
+    public void añadirPersona(Persona p) {
+    listaPersonas.add(p);
     }
-
-    public void eliminarPersona(int i){
-        if(i<listaPersonas.size())
-            listaPersonas.remove(i);
-        else
-            System.out.println("indice erroneo");
+    public void eliminarPersona(int i) {
+    if (i<listaPersonas.size()) listaPersonas.remove(i);
     }
-
-    public void borrarLista(){
-        listaPersonas.removeAll(listaPersonas);
+    public void borrarLista() {
+    listaPersonas.removeAll(listaPersonas);
     }
-
-    public void listar(){
-        for(int i=0; i<listaPersonas.size();i++){
-            System.out.println("posicion: "+i+" : "+listaPersonas.get(i).toString());
-        }
+    public void listar() {
+    for (int i = 0; i <listaPersonas.size(); i++) {
+    System.out.println(listaPersonas.get(i).toString());
     }
-    @Override
-    public String toString() {
-        return "ListaPersonas [listaPersonas=" + listaPersonas + "]";
     }
-
     
-}
+    
+    }

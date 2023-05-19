@@ -19,6 +19,7 @@ public class testConsola {
 
         alumnos.borrarLista();
         System.out.println("lista borrada");
+        alumnos.listar();
 
     }
     
