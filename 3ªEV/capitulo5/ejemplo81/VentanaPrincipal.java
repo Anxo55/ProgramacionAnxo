@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
@@ -19,9 +20,10 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 
-public class VentanaPrincipal extends JFrame implements ActionListener{
 
-     private ListaPersonas lista; // El objeto ListaPersonas de la aplicación
+public class VentanaPrincipal extends JFrame implements ActionListener {
+
+	private ListaPersonas lista; // El objeto ListaPersonas de la aplicación
 	private Container contenedor; /* Un contenedor de elementos gráficos */
 	// Etiquetas estáticas para los nombres de los atributos
 	private JLabel nombre, apellidos, teléfono, dirección;
@@ -37,9 +39,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 	 */
 	public VentanaPrincipal() {
 		lista = new ListaPersonas(); // Crea la lista de personas
-
 		inicio();
-          
 		setTitle("Personas"); // Establece el título de la ventana
 		setSize(470, 350); // Establece el tamaño de la ventana
 		setLocationRelativeTo(null); /* La ventana se posiciona en el centro de la pantalla */
@@ -51,8 +51,6 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 	/**
 	 * Método que crea la ventana con sus diferentes componentes gráficos
 	 */
-
-
 	private void inicio() {
 		contenedor = getContentPane(); /*
 										 * Obtiene el panel de contenidos de la ventana
@@ -80,8 +78,6 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		campoTeléfono = new JTextField();
 		// Establece la posición del campo de texto teléfono
 		campoTeléfono.setBounds(105, 80, 135, 23);
-
-
 		// Establece la etiqueta y el campo dirección
 		dirección = new JLabel();
 		dirección.setText("Dirección:");
@@ -89,63 +85,66 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		campoDirección = new JTextField();
 		// Establece la posición del campo de texto dirección
 		campoDirección.setBounds(105, 110, 135, 23);
-
-
 		// Establece el botón Añadir persona
 		añadir = new JButton();
 		añadir.setText("Añadir");
 		añadir.setBounds(105, 150, 80, 23); /* Establece la posición del botón Añadir persona */
-
 		/* Agrega al botón un ActionListener para que gestione eventos del botón */
 		añadir.addActionListener(this);
-
-
 		// Establece el botón Eliminar persona
 		eliminar = new JButton();
 		eliminar.setText("Eliminar");
 		eliminar.setBounds(20, 280, 80, 23); /* Establece la posición del botón Eliminar persona */
-
 		/* Agrega al botón un ActionListener para que gestione eventos del botón */
 		eliminar.addActionListener(this);
-
-
 		// Establece el botón Borrar lista
 		borrarLista = new JButton();
 		borrarLista.setText("Borrar Lista");
 		borrarLista.setBounds(120, 280, 120, 23); /* Establece la posición del botón Borrar lista */
-
 		/* Agrega al botón un ActionListener para que gestione eventos del botón */
 		borrarLista.addActionListener(this);
 
 		
-		// Establece el botón Guardar lista
 		guardar = new JButton();
-		guardar.setText("Guardar Lista"); //120 +120 +10
-		guardar.setBounds(250, 280, 120, 23); /* Establece la posición del botón Gaurdar lista */
+		guardar.setText("Guardar lista");
+		guardar.setBounds(250, 280, 120, 23); /* Establece la posición del botón Borrar lista */
 		/* Agrega al botón un ActionListener para que gestione eventos del botón */
 		guardar.addActionListener(this);
-
-
-
+		
+		
+		
+		
 		// Establece la lista gráfica de personas
 		listaNombres = new JList();
 		/* Establece que se pueda seleccionar solamente un elemento de la lista */
 		listaNombres.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		modelo = new DefaultListModel();
-		//1 obtengo los datos de fichero
-		lista=poblarLista();
-		//2 tengo que usar el modelo para ir añadiendo personas al JList
+		
+		//1 obtengo los datos de fichero 
+		if(poblarLista()!=null){
+			lista=poblarLista();
+		}
+		else 
+		lista= new ListaPersonas();
+		
+		//PENDIENTE DE CORRECCIÓN--> 2 tengo que usar ese modelo para ir añadiendo personas al JLIST
+		for(int i=0;i<lista.listaPersonas.size();i++) {
+			String elemento = lista.listaPersonas.get(i).nombre + "-" + lista.listaPersonas.get(i).apellidos + "-" + lista.listaPersonas.get(i).telefono + "-"
+					+ lista.listaPersonas.get(i).direccion;
+			modelo.addElement(elemento);
+			/* Se agrega el texto con los datos de la persona al JList */
+			listaNombres.setModel(modelo);
+		}
+		
+		
 
-
-
+		
 		// Establece una barra de desplazamiento vertical
 		scrollLista = new JScrollPane();
 		// Establece la posición de la barra de desplazamiento vertical
 		scrollLista.setBounds(20, 190, 220, 80);
 		// Asocia la barra de desplazamiento vertical a la lista de personas
 		scrollLista.setViewportView(listaNombres);
-
-
 		// Se añade cada componente gráfico al contenedor de la ventana
 		contenedor.add(nombre);
 		contenedor.add(campoNombre);
@@ -158,8 +157,8 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		contenedor.add(añadir);
 		contenedor.add(eliminar);
 		contenedor.add(borrarLista);
-		contenedor.add(guardar);
 		contenedor.add(scrollLista);
+		contenedor.add(guardar);
 	}
 
 	/**
@@ -181,10 +180,8 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 			/* Si se pulsa el botón borrar lista */
 			borrarLista(); // Se invoca borrar lista
 		}
-
-		if (evento.getSource() == guardar) {
-			/* Si se pulsa el botón guardar lista */
-			guardarLista(); // Se invoca guardar lista
+		if (evento.getSource() == guardar) { 
+			guardarLista();
 		}
 	}
 
@@ -232,34 +229,58 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		lista.borrarLista(); // Se eliminan todas las personas del vector
 		modelo.clear(); // Limpia el JList, la lista gráfica de personas
 	}
-
-	private void guardarLista() {
-		try{
-		ObjectOutputStream escribiendoFichero = new ObjectOutputStream(
-			new FileOutputStream("lista.dat"));
-		escribiendoFichero.writeObject(lista);
-		escribiendoFichero.close();
+	
+	
+	
+	
+	/**
+	 * Método que guarda en un fichero Personas.dat toda las personas de la lista
+	 */
+	private void guardarLista(){
+		try {
+			ObjectOutputStream escribiendoFichero= new ObjectOutputStream(new FileOutputStream("lista.dat"));
+			escribiendoFichero.writeObject(lista.getListaPersonas());
+			escribiendoFichero.close();
+			JOptionPane.showMessageDialog(null, "Guardado correctamente","Info" , JOptionPane.INFORMATION_MESSAGE);
 		
-	}catch (Exception e) {
-		System.out.println(e.getMessage());
+		}catch(Exception e){
+			JOptionPane.showMessageDialog(null, "No se pudo guardar", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 	}
-}
-
-private ListaPersonas poblarLista() {
-
-		ListaPersonas provisional;
-	try {
-		ObjectInputStream leyendoFichero = new ObjectInputStream(
-		new FileInputStream("lista.dat") );
-
-		provisional = (ListaPersonas ) leyendoFichero.readObject();
-		leyendoFichero.close();
+	
+	
+	private ListaPersonas poblarLista() {
+		ListaPersonas provisional= new ListaPersonas();
+		//poblamos la lista con los registros que ya existen en Persona.dat
+		try {
+			FileInputStream fis= new FileInputStream("lista.dat");
+			ObjectInputStream leyendoFichero= new ObjectInputStream(fis);
+			provisional.setListaPersonas((ArrayList<Persona>) leyendoFichero.readObject());
+			leyendoFichero.close();
+			fis.close();
+			return provisional;
+			
+		}catch(Exception e){
+			JOptionPane.showMessageDialog(null, "No se pudo poblar la lista", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 		
-		//return provisional;
-		
-	} catch (Exception e) {
-		System.out.println(e.getMessage());
+		return null;		
 	}
-	return null;
+
 }
-}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
