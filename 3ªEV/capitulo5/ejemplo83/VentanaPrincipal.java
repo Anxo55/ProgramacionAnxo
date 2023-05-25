@@ -13,7 +13,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 	// Un contenedor de elementos gráficos
 	private Container contenedor;
 	// Botones para seleccionar una figura geométrica determinada
-	private JButton cilindro, esfera, piramide;
+	private JButton cilindro, esfera, piramide,cubo;
 
 	/**
 	 * Constructor de la clase VentanaPrincipal
@@ -21,7 +21,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 	public VentanaPrincipal() {
 		inicio();
 		setTitle("Figuras"); // Establece el título de la ventana
-		setSize(350, 160); // Establece el tamaño de la ventana
+		setSize(500, 300); // Establece el tamaño de la ventana
 		setLocationRelativeTo(null);
 		// Establece que el botón de cerrar permitirá salir de la aplicación
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -61,10 +61,17 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 		 */
 		piramide.addActionListener(this);
 
+		cubo = new JButton();
+		cubo.setText("Cubo");
+		cubo.setBounds(350,50,100,23);
+
+		cubo.addActionListener(this);
+
 		// Se añade cada componente gráfico al contenedor de la ventana
 		contenedor.add(cilindro);
 		contenedor.add(esfera);
 		contenedor.add(piramide);
+		contenedor.add(cubo);
 	}
 
 	/**
@@ -81,6 +88,11 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 		}
 		if (evento.getSource() == piramide) { /* Si se pulsa el botón pirámide */
 			VentanaPiramide piramide = new VentanaPiramide(); /* Crea la ventana de la pirámide */
+			piramide.setVisible(true);
+		}
+
+		if (evento.getSource() == cubo) { /* Si se pulsa el botón pirámide */
+			VentanaCubo cubo = new VentanaCubo(); /* Crea la ventana de la pirámide */
 			piramide.setVisible(true);
 		}
 	}
