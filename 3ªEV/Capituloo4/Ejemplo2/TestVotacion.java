@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TestVotacion {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
-        char voto;
+        String voto;
         System.out.println("Inicio de Votacion");
         Votacion.showItToMe();
         

@@ -262,3 +262,4 @@ public class VentanaHabitaciones extends JFrame implements ActionListener {
 		}
 	}
 }
+

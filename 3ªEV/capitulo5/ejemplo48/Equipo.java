@@ -12,6 +12,7 @@ public class Equipo {
     private int posicion=0;
     private String pais;
     private ArrayList<Ciclista> listaCiclistas;
+    public Object getlistaCiclistas;
 
     public Equipo(String nombre, String pais) {
         this.nombre = nombre;

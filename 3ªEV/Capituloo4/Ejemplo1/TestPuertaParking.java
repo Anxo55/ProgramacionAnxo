@@ -1,4 +1,4 @@
-package TercerTrimestre.Ejemplo1;
+package Ejemplo1;
 
 import java.util.Scanner;
 

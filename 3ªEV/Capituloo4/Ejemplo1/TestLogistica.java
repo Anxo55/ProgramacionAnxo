@@ -1,12 +1,12 @@
-package TercerTrimestre.Ejemplo1;
+package Ejemplo1;
 
 import java.util.Scanner;
 
-public class TestLogisticaCC {
+public class TestLogistica {
     public static void main(String[] args) {
-        LogisticaCC Almacen1 = new LogisticaCC((byte) 2, "cerca 1");
-        LogisticaCC Almacen2 = new LogisticaCC((byte) 4, "media 2");
-        LogisticaCC Almacen3 = new LogisticaCC((byte) 8, "lejos 3");
+        Logistica Almacen1 = new Logistica((byte) 2, "cerca 1");
+        Logistica Almacen2 = new Logistica((byte) 4, "media 2");
+        Logistica Almacen3 = new Logistica((byte) 8, "lejos 3");
 
         String Accion;
         Scanner sc = new Scanner(System.in);
@@ -35,5 +35,4 @@ public class TestLogisticaCC {
                 System.out.println("Hay que esperar a que vengan a poner un contenedor");
         } while (!Accion.equals("Salir"));
     }
-
 }

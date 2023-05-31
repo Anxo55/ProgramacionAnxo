@@ -1,20 +1,31 @@
 import java.util.Arrays;
 
+import capitulo5.ejemplo3.Color;
+
 public class Figura {
 
 private Color ColorFigura;
  private int[] Posicion = new int[2];
 
- Figura(Color color) {
- EstableceColor(color);
+ Figura(java.awt.Color blue) {
+ EstableceColor(blue);
  }
 
- Figura(Color color, int[] Posicion) {
- EstableceColor(color);
+ private void EstableceColor(Color color) {
+}
+
+Figura(java.awt.Color green, int[] Posicion) {
+ EstableceColor(green);
  EstableceCentro(Posicion);
  }
 
- public void setColor(Color color) {
+ private void EstableceColor(java.awt.Color green) {
+}
+
+private void EstableceCentro(int[] posicion2) {
+}
+
+public void setColor(Color color) {
  ColorFigura = color;
  }
 

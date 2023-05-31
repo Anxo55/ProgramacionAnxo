@@ -1,4 +1,4 @@
-package TercerTrimestre.Ejemplo1;
+package Ejemplo1;
 
 public class Puerta {
     LogisticaCC Parking = null;

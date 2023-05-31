@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Vector;
 
-public class Hola {
+public class Hotel {
 	// Atributo que establece el conjunto de habitaciones del hotel
 	public static ArrayList<Habitacion> listaHabitaciones;
 
-	public Hola() {
+	public Hotel() {
 		listaHabitaciones = new ArrayList<Habitacion>(); /* Crea el vector de habitaciones */
 		/*
 		 * Crea cada Habitacion con un número de Habitacion, disponibilidad inicial y

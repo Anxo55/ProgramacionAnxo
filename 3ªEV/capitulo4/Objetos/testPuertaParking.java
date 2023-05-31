@@ -1,6 +1,12 @@
+import java.util.Scanner;
+
+import Maquina.Almacen;
+
 public class testPuertaParking {
  
     public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
          char CPuerta, COperacion;
          Puerta PuertaRequerida = null;
         
@@ -46,7 +52,7 @@ public class testPuertaParking {
          String Entrada;
         
          System.out.print (Mensaje);
-         Entrada = Teclado.Lee_String();
+         Entrada = sc.Lee_String();
          System.out.println();
          Entrada = Entrada.toLowerCase();
          return Entrada.charAt(0);
