@@ -11,7 +11,7 @@ public class Carrera {
     private String nombre;
     private String pais;
     private ArrayList<Equipo> listaEquipos;
-    private ArrayList<Ciclista> clasificacion;
+    ArrayList<Ciclista> clasificacion;
 
     public Carrera(String nombre, String pais) {
         this.nombre = nombre;
