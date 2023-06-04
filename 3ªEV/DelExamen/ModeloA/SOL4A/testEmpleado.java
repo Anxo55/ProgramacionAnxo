@@ -33,13 +33,13 @@ public class testEmpleado {
 	public static void main(String[] args) {
 		ArrayList<Empleado> empresa = new ArrayList<Empleado>();
 		
-		Empleado javier = new EAsalariado("569587A", "Javier", "G�mez", 2008, 1225.0);
+		Empleado javier = new EAsalariado("569587A", "Javier", "Gomez", 2008, 1225.0);
 		Empleado eva = new EComision("695235B", "Eva", "Nieto", 2010, 179, 8.1);
 		
 		EComision jose = new EComision();
 		
 		jose.setDni("741258C");
-		jose.setNombre("Jos�");
+		jose.setNombre("Jose");
 		jose.setApellidos("Ruiz");
 		jose.setAñoIngreso(2012);
 		jose.setNumClientes(81);

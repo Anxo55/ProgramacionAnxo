@@ -38,7 +38,7 @@ public class EComision extends Empleado{
 		System.out.println("DNI: " + dni);
 		System.out.println("nombre: " + nombre);
 		System.out.println("apellidos: " + apellidos);
-		System.out.println("a�oIngreso: " + añoIngreso);
+		System.out.println("añoIngreso: " + añoIngreso);
 		System.out.println("Numero Clientes: " + numClientes);
 		System.out.println("valor de cada cliente : " + valorCliente);
 		

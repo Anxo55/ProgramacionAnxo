@@ -5,7 +5,7 @@ public abstract class Empleado {
 	String dni;
 	String nombre;
 	String apellidos;
-	int a�oIngreso;
+	int añoIngreso;
 	
 	public Empleado() {
 		
