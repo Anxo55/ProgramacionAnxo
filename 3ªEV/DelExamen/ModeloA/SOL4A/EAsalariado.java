@@ -11,8 +11,8 @@ public class EAsalariado extends Empleado{
 		super();
 	}
 	
-	public EAsalariado(String dNI, String nombre, String apellidos, int añoIngreso,double sal) {
-		super(dNI, nombre, apellidos, añoIngreso);
+	public EAsalariado(String dNI, String nombre, String apellidos, int aÃ±oIngreso,double sal) {
+		super(dNI, nombre, apellidos, aÃ±oIngreso);
 		this.salariofijobase = sal;
 	}
 	
@@ -31,7 +31,7 @@ public class EAsalariado extends Empleado{
 		System.out.println("DNI: " + dni);
 		System.out.println("nombre: " + nombre);
 		System.out.println("apellidos: " + apellidos);
-		System.out.println("añoIngreso: " + añoIngreso);
+		System.out.println("aÃ±oIngreso: " + aÃ±oIngreso);
 		System.out.println("SalarioBase: " + salariofijobase);
 		
 	}
@@ -39,15 +39,15 @@ public class EAsalariado extends Empleado{
 	@Override
 	public double obtenerSalario() {
 		double salariofinal = 0;
-		int añostrabajados =  2022 - this.añoIngreso ;
+		int aÃ±ostrabajados =  2022 - this.aÃ±oIngreso ;
 		
-		if(añostrabajados <= 3) {
+		if(aÃ±ostrabajados <= 3) {
 			salariofinal = this.salariofijobase*1.05;		
-		}else if(añostrabajados > 3 && añostrabajados <= 7){
+		}else if(aÃ±ostrabajados > 3 && aÃ±ostrabajados <= 7){
 			salariofinal = this.salariofijobase*1.1;	
-		}else if(añostrabajados > 7 && añostrabajados <= 15){
+		}else if(aÃ±ostrabajados > 7 && aÃ±ostrabajados <= 15){
 			salariofinal = this.salariofijobase*1.15;
-		}else if (añostrabajados > 15) {
+		}else if (aÃ±ostrabajados > 15) {
 			salariofinal = this.salariofijobase*1.2;
 		}
 		return salariofinal;

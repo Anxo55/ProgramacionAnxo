@@ -26,7 +26,7 @@ public class Jugador {
 
 	public void imprimir() {
 		System.out.println("Nombre: " + nombre);
-		System.out.println("Demarcación: " + demarcacion);
+		System.out.println("Demarcaciï¿½n: " + demarcacion);
 		System.out.println("Partidos Jugados: " + partidosJugados);
 		System.out.println("Goles Marcados: " + golesMarcados);
 		System.out.println("Tarjetas amarillas:" + tarjetasAmarillas);

@@ -9,8 +9,8 @@ public class EComision extends Empleado{
 		super();
 	}
 	
-	public EComision(String dNI, String nombre, String apellidos, int añoIngreso,int numc,double v) {
-		super(dNI, nombre, apellidos, añoIngreso);
+	public EComision(String dNI, String nombre, String apellidos, int aÃ±oIngreso,int numc,double v) {
+		super(dNI, nombre, apellidos, aÃ±oIngreso);
 		this.numClientes = numc;
 		this.valorCliente = v;
 	}
@@ -38,7 +38,7 @@ public class EComision extends Empleado{
 		System.out.println("DNI: " + dni);
 		System.out.println("nombre: " + nombre);
 		System.out.println("apellidos: " + apellidos);
-		System.out.println("añoIngreso: " + añoIngreso);
+		System.out.println("aï¿½oIngreso: " + aÃ±oIngreso);
 		System.out.println("Numero Clientes: " + numClientes);
 		System.out.println("valor de cada cliente : " + valorCliente);
 		

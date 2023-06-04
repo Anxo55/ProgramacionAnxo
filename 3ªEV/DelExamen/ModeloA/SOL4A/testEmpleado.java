@@ -17,7 +17,7 @@ public class testEmpleado {
 			}
 		}
 		
-		System.out.println("Empleado que más cobra es " + nombre +" " + apellido + " con un salario de " + max);
+		System.out.println("Empleado que mas cobra es " + nombre +" " + apellido + " con un salario de " + max);
 	}
 	
 	public static void muestraTodos(ArrayList<Empleado> empresa) {
@@ -33,24 +33,24 @@ public class testEmpleado {
 	public static void main(String[] args) {
 		ArrayList<Empleado> empresa = new ArrayList<Empleado>();
 		
-		Empleado javier = new EAsalariado("569587A", "Javier", "Gómez", 2008, 1225.0);
+		Empleado javier = new EAsalariado("569587A", "Javier", "Gï¿½mez", 2008, 1225.0);
 		Empleado eva = new EComision("695235B", "Eva", "Nieto", 2010, 179, 8.1);
 		
 		EComision jose = new EComision();
 		
 		jose.setDni("741258C");
-		jose.setNombre("José");
+		jose.setNombre("Josï¿½");
 		jose.setApellidos("Ruiz");
-		jose.setAñoIngreso(2012);
+		jose.setAÃ±oIngreso(2012);
 		jose.setNumClientes(81);
 		jose.setValorCliente(7.9);
 		
 		EAsalariado maria = new EAsalariado();
 		
 		maria.setNombre("Maria");
-		maria.setApellidos("Núñez");
+		maria.setApellidos("Nï¿½ï¿½ez");
 		maria.setDni("896325D");
-		maria.setAñoIngreso(2013);
+		maria.setAÃ±oIngreso(2013);
 		maria.setSalariofijobase(1155.0);
 		
 		empresa.add(jose);

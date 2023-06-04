@@ -5,16 +5,16 @@ public abstract class Empleado {
 	String dni;
 	String nombre;
 	String apellidos;
-	int añoIngreso;
+	int aï¿½oIngreso;
 	
 	public Empleado() {
 		
 	}
-	public Empleado(String dNI, String nombre, String apellidos, int añoIngreso) {
+	public Empleado(String dNI, String nombre, String apellidos, int aÃ±oIngreso) {
 		this.dni = dNI;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
-		this.añoIngreso = añoIngreso;
+		this.aÃ±oIngreso = aÃ±oIngreso;
 	}
 
 	public abstract void imprimir();
@@ -38,11 +38,11 @@ public abstract class Empleado {
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
-	public int getAñoIngreso() {
-		return añoIngreso;
+	public int getAÃ±oIngreso() {
+		return aÃ±oIngreso;
 	}
-	public void setAñoIngreso(int añoIngreso) {
-		this.añoIngreso = añoIngreso;
+	public void setAÃ±oIngreso(int aÃ±oIngreso) {
+		this.aÃ±oIngreso = aÃ±oIngreso;
 	}
 	
 	

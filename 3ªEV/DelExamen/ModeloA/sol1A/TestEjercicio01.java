@@ -7,8 +7,8 @@ import java.util.List;
 
 /*
  Crear un fichero de testeo con un list de tres porteros y dos jugadores. 
- Recórralo mostrando con el método imprimir 
- SÓLO la información de cada portero.
+ Recï¿½rralo mostrando con el mï¿½todo imprimir 
+ Sï¿½LO la informaciï¿½n de cada portero.
 */
 public class TestEjercicio01 {
 public static void main(String[] args) {

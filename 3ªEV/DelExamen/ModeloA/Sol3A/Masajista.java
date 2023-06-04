@@ -1,4 +1,4 @@
-package SolB3;
+package Sol3A;
 
 public class Masajista extends Seleccion{
     //atributos

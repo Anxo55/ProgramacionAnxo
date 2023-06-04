@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Logica {
 	
-	public static Hotel pequeño, normal, grande;
+	public static Hotel pequeÃ±o, normal, grande;
 	static boolean edge = true;
 
 	public static void control() {
@@ -19,8 +19,8 @@ public class Logica {
 
 		switch (option) {
 		case 1:
-			if (pequeño.getNumPersonas() < pequeño.getCapacidad()) {
-				pequeño.meter();
+			if (pequeÃ±o.getNumPersonas() < pequeÃ±o.getCapacidad()) {
+				pequeÃ±o.meter();
 			} else if (normal.getNumPersonas() < normal.getCapacidad()) {
 				normal.meter();
 			} else {
@@ -28,8 +28,8 @@ public class Logica {
 			}
 			break;
 		case 2:
-			if (pequeño.getNumPersonas() > 0) {
-				pequeño.sacar();
+			if (pequeÃ±o.getNumPersonas() > 0) {
+				pequeÃ±o.sacar();
 			} else if (normal.getNumPersonas() > 0) {
 				normal.sacar();
 			} else {
@@ -47,7 +47,7 @@ public class Logica {
 	
 	public static void menu() {
 		//create three warehouses
-		pequeño = new Hotel(4);
+		pequeÃ±o = new Hotel(4);
 		normal = new Hotel(6);
 		grande = new Hotel(8);
 		

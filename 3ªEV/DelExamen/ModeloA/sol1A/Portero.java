@@ -7,7 +7,7 @@ public class Portero extends Jugador{
 	
 	
 	/*Crear un constructor para dar valor a todos los atributos de la clase Portero, incluidos los heredados. 
-	 * Deberá usar el constructor de la clase Jugador.
+	 * Deberï¿½ usar el constructor de la clase Jugador.
 	 * */
 	
 	public Portero(String nombre, String demarcacion, int partJugados, int golesMarc,
@@ -45,7 +45,7 @@ public class Portero extends Jugador{
 		this.penaltisParados = penaltisParados;
 	}
 
-	/*Sobrescribir el método imprimir, para que imprima todos los parámetros.*/
+	/*Sobrescribir el mï¿½todo imprimir, para que imprima todos los parï¿½metros.*/
 	@Override
 	public void imprimir() {
 		super.imprimir();
