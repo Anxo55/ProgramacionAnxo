@@ -58,7 +58,7 @@ public class Libro extends Publicacion {
 
     @Override
     public String toString() {
-        return "Libro [Titulo=" + Titulo + ", TipoPortada=" + TipoPortada + ", ISBN=" + ISBN + ", NombreAutor="
+        return super.toString() + "Libro [Titulo=" + Titulo + ", TipoPortada=" + TipoPortada + ", ISBN=" + ISBN + ", NombreAutor="
                 + NombreAutor + ", Editorial=" + Editorial + "]";
     }
 

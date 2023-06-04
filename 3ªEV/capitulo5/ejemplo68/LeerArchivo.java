@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 public class LeerArchivo {
 
     public static void main(String[] args) {
-        String nombreArchivo = "C:\\Users\\Primero DAM\\Desktop\\GitHUb\\ProgramacionAnxo\\3ªEV\\capitulo5\\ejemplo68\\prueba.txt";
+        String nombreArchivo = "C:\\Users\\anxoc\\OneDrivecEscritorio\\GitHub2\\ProgramacionAnxo\\3ªEV\\capitulo5\\ejemplo68\\prueba.txt";
 
         FileInputStream archivo;
         InputStreamReader conversor;

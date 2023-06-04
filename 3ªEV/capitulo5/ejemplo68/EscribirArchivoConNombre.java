@@ -16,7 +16,7 @@ public class EscribirArchivoConNombre {
         nombre = sc.nextLine();
 
         try{
-            archivo = new FileWriter("C:\\Users\\Primero DAM\\Desktop\\GitHUb\\ProgramacionAnxo\\3ªEV\\capitulo5\\ejemplo68\\"+nombre+".txt");
+            archivo = new FileWriter("C:\\Users\\anxoc\\OneDrivecEscritorio\\GitHub2\\ProgramacionAnxo\\3ªEV\\capitulo5\\ejemplo68\\"+nombre+".txt");
 
             impresor = new PrintWriter(archivo);
             for(int i=0; i<10; i++){

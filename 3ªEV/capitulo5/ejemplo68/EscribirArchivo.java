@@ -9,7 +9,7 @@ public class EscribirArchivo {
         FileWriter archivo = null;
         PrintWriter impresor = null;
         try{
-            archivo = new FileWriter("C:\\Users\\Primero DAM\\Desktop\\GitHUb\\ProgramacionAnxo\\3ªEV\\capitulo5\\ejemplo68\\prueba2.txt");
+            archivo = new FileWriter("C:\\Users\\anxoc\\OneDrivecEscritorio\\GitHub2\\ProgramacionAnxo\\3ªEV\\capitulo5\\ejemplo68\\prueba2.txt");
             impresor = new PrintWriter(archivo);
             for(int i=0; i<10; i++) 
             impresor.println("Ronda "+ i);

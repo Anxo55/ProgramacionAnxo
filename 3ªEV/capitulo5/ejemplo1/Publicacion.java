@@ -32,6 +32,11 @@ public class Publicacion {
         Precio = precio;
     }
 
+    @Override
+    public String toString() {
+        return "Publicacion [NumeroDePaginas=" + NumeroDePaginas + ", Precio=" + Precio + "]";
+    }
+
     
     
 }

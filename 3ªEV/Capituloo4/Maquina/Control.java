@@ -3,12 +3,12 @@ package Maquina;
 import java.util.Scanner;
 
 public class Control {
-    // ***************************************************
- // * Recoge monedas en 'Maquina' para cobrar 'Precio'.
+// ***************************************************
+// * Recoge monedas en 'Maquina' para cobrar 'Precio'.
 // * Devuelve 'true'
 // * si el pago se ha realizado con exito y 'false' en
 // * caso contrario
- // ****************************************************
+// ****************************************************
 public static boolean IntroduccionMonedas
 (Modelo Maquina, float Precio) {
     Scanner sc = new Scanner(System.in);

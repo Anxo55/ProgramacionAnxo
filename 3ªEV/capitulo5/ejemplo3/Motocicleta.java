@@ -23,7 +23,7 @@ public class Motocicleta extends Vehiculo {
     }
 
     Motocicleta(Color color, short Cilindrada,
-            short Potencia) {
+            short Potencia) { 
         super(color, (byte) 2, Cilindrada, Potencia);
     }
 

@@ -1,4 +1,4 @@
-
+package capitulo5.Ejemplo48;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -119,6 +119,10 @@ public class Equipo {
     }
     
     }
+
+
+
+
 
     @Override
     public String toString() {

@@ -8,7 +8,7 @@ import java.util.Arrays;
 abstract public class Figura implements Comparable, Perimetrosa{
     
     protected Color ColorFigura;
-     protected int[] Posicion = new int[2];
+    protected int[] Posicion = new int[2];
     
      Figura() {
      setColor(Color.black);

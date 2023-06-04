@@ -5,7 +5,7 @@ private String Nombre;
 private int Capacidad;
 private int NumeroDeElementos = 0;
 
-Almacen(int Capacidad, String Nombre) {
+public Almacen(int Capacidad, String Nombre) {
 this.Capacidad = Capacidad;
 this.Nombre= Nombre;
 }
@@ -44,6 +44,9 @@ NumeroDeElementos = Capacidad;
 @Override
 public String toString() {
     return "Almacen [Nombre=" + Nombre + ", Capacidad=" + Capacidad + ", NumeroDeElementos=" + NumeroDeElementos + "]";
+}
+
+public void MeteContenedor() {
 }
 
 }

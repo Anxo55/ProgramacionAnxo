@@ -1,3 +1,4 @@
+package capitulo5.Ejemplo48;
 public class Test {
     public static void main(String[] args) {
         Equipo equipo1 = new Equipo("Sky", "Estados Unidos");
@@ -52,16 +53,11 @@ public class Test {
 
         equipo1.ordenaTiempo();
         equipo2.ordenaTiempo();
-
+        
         giro.clasificacionCiclistas();
         System.out.println("clasificacion general ordenada");
-        System.out.println("-----------------");
-        giro.imprimirClasificacion();
-
-        System.out.println("Clasificacion por equipos ordenada");
-        System.out.println("------------------");
-        giro.clasificacionEquipos();
-        giro.listarEquipo();
+        
+        System.out.println(giro.clasificacion.toString());
 
     }
 
