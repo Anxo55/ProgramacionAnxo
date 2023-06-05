@@ -1,16 +1,13 @@
-package sol5A;
+package EJ1B;
 
 public class Cine {
 
-	// SALA 1 : 4 espectadores
-	// SALA 2 : 3 espectadores
-	// SALA 3 : 2 espectadores
 	
 	int capacidad;
 	int npersonas;
 
 	
-	public Cine(int capacidad) {
+	Cine(int capacidad) {
 		this.capacidad = capacidad;
 		this.npersonas = capacidad;
 	}

@@ -1,8 +1,9 @@
-package sol5A;
+package EJ1B;
 
 import java.util.Scanner;
 
-public class ConteoPersonas {
+
+public class CuentaPersonas {
 
 	public static Cine uno, dos, tres;
 
@@ -12,10 +13,10 @@ public class ConteoPersonas {
 
 		int opcion = 0;
 		Scanner esc = new Scanner(System.in);
-		System.out.println("\n Aplicaci�n de conteo, seleccione una opci�n\n "
+		System.out.println("\n Apliacion de cuenta personas, seleccione una opcion\n "
 				+ "Pulsa 1 si quieres METER una persona.\n"
 				+ "Pulsa 2 si quieres SACAR una persona.\n"
-				+ "Puelsa 3 si quieres SALIR DE LA APLICACI�N.");
+				+ "Puelsa 3 si quieres SALIR DE LA APLICACION.");
 		opcion = esc.nextInt();
 
 		switch (opcion) {
@@ -43,10 +44,10 @@ public class ConteoPersonas {
 
 		case 3: // salir
 			corte=false;
-			System.out.println("Fin simulaci�n.");
+			System.out.println("Fin simulacion.");
 			break;
 
-		default: System.out.println("opcion no v�lida");
+		default: System.out.println("opcion no valida");
 
 		}
 
