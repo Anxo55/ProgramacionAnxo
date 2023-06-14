@@ -2,7 +2,6 @@ package EJ1B;
 
 public class Cine {
 
-	
 	int capacidad;
 	int npersonas;
 

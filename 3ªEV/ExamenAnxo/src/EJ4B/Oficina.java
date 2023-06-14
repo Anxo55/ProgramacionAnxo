@@ -25,7 +25,14 @@ public class Oficina extends Local{
         return super.toString()+ "Oficina [valorArea=" + valorArea + ", esGobierno=" + esGobierno + "]";
     }
 
-    
+    @Override
+    public double calcularImpuesto() {
+        // TODO Auto-generated method stub
+        double parcial = super.calcularImpuesto();
+        if(esGobierno)
+        parcial += 2000;
+        return parcial; 
+    }
 
 }
 

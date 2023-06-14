@@ -5,8 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.io.Serializable;
 
-public class Jugador {
+public class Jugador implements Serializable{
 	private String nombre;
 	private String demarcacion;
 	private int partidosJugados;

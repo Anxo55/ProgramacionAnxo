@@ -21,9 +21,10 @@ public class TestJugadores {
         jugadores.add(tres);
         jugadores.add(cuatro);
         jugadores.add(cinco);
+        
 
         try {
-            archivo = new FileWriter("delanteros.txt");
+            archivo = new FileWriter("delanteros.dat");
             impresor = new PrintWriter(archivo);
             for (Jugador jugador : jugadores) {
                 if (jugador instanceof Delantero)

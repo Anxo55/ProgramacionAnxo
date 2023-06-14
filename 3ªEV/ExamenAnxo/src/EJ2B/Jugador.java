@@ -1,6 +1,8 @@
 package EJ2B;
 
-public class Jugador {
+import java.io.Serializable;
+
+public class Jugador implements Serializable{
 	private String nombre;
 	private String demarcacion;
 	private int partidosJugados;

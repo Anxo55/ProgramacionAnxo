@@ -37,9 +37,10 @@ public class Delantero extends Jugador {
     }
 
     public void imprimir() {
-        super.toString();
+        super.imprimir();
         System.out.println("Goles: " + golesMetidos);
         System.out.println("Penaltis Fallados: " + penaltisFallados);
     }
+    
 
 }

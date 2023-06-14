@@ -15,10 +15,13 @@ public class Apartamento extends Vivienda{
 	        return super.toString()+ "Apartamento []";
 	    }
 
-	    
-
-	   
-	    
+		@Override
+		public double calcularImpuesto() {
+		// TODO Auto-generated method stub
+		double parcial = super.calcularImpuesto();
+		parcial+=0.04*this.calculaPrecio()+300*this.numHabitaciones+200*numBaños;
+		return parcial;
+		}
 
 	}
 

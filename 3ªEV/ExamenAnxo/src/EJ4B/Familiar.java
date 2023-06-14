@@ -18,6 +18,14 @@ public class Familiar extends Apartamento{
         return super.toString()+"Familiar [valorArea=" + valorArea + ", valorAdministracion=" + valorAdministracion + "]";
     }
 
+    @Override
+    public double calcularImpuesto() {
+        // TODO Auto-generated method stub
+        double parcial =  super.calcularImpuesto();
+        parcial+= 3 * this.valorAdministracion;
+        return parcial;
+
+    }
     
 }
 

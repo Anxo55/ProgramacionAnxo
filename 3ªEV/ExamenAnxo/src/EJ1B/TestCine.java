@@ -4,7 +4,7 @@ public class TestCine {
 
 	public static void main(String[] args) {
 		
-		CuentaPersonas contador = new CuentaPersonas();
+		new CuentaPersonas();
 		CuentaPersonas.menu();
 	}
 }

@@ -20,7 +20,13 @@ public class Rural extends Casa{
                 + "]";
     }
 
-    
+    @Override
+    public double calcularImpuesto() {
+        // TODO Auto-generated method stub
+        double parcial = super.calcularImpuesto();
+        parcial+=this.altitud;
+        return parcial;
+    }
 
 }
 

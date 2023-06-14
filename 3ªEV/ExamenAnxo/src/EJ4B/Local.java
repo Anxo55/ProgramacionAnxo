@@ -15,7 +15,14 @@ protected tipo tipoLocal;
         return super.toString()+ "Local []";
     }
 
-    
+    @Override
+public double calcularImpuesto() {
+    // TODO Auto-generated method stub
+    double parcial = super.calcularImpuesto();
+    parcial+=0.03*this.calculaPrecio();
+
+    return parcial;
+}
     
     
 }

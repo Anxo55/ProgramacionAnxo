@@ -2,7 +2,7 @@ package EJ4B;
 
 
 
-public class Inmueble {
+public class Inmueble implements Impuesto{
 
     protected static double valorArea=0;
 
@@ -25,7 +25,7 @@ public class Inmueble {
 
 
 
-    public double calculaPrecio(double valorArea){
+    public double calculaPrecio(){
         return  area*valorArea;
         
     }
@@ -51,6 +51,21 @@ public class Inmueble {
     public String toString() {
         return "Inmueble [idTipo=" + idTipo + ", area=" + area + ", direccion=" + direccion + ",valor=" +valorArea +"]";
     }
+
+
+
+
+    @Override
+    public double calcularImpuesto() {
+        return 0d;
+    }
+
+
+
+
+    // public double calculaPrecio() {
+    //     return 0;
+    // }
 
 
 
