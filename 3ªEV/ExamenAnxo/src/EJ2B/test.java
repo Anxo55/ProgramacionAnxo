@@ -1,11 +1,14 @@
 package EJ2B;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.List;
 
 public class test {
 public static void main(String[] args) {
-	List<Jugador> equipo = new ArrayList<Jugador>();
+	FileWriter archivo = null;
+	PrintWriter impresor = null;
+	ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 	
 	Portero portero1 = new Portero("Casillas", "Portero", 5, 1, 0, 0, 3, 10);
 	Portero portero2 = new Portero("Manuel", "Portero", 1, 0, 0, 0, 0, 2);
@@ -14,17 +17,32 @@ public static void main(String[] args) {
 	Jugador jugador1 = new Jugador("Ramiro", "Delantero", 3, 1, 0, 1);
 	Jugador jugador2 = new Jugador("Pedro", "Defensa", 1, 1, 1, 4);
 	
-	equipo.add(portero1);
-	equipo.add(portero2);
-	equipo.add(portero3);
-	equipo.add(jugador1);
-	equipo.add(jugador2);
+	jugadores.add(portero1);
+	jugadores.add(portero2);
+	jugadores.add(portero3);
+	jugadores.add(jugador1);
+	jugadores.add(jugador2);
 	
-	
-	for (Jugador j : equipo) {
-		// entrenador
-		if (j instanceof Portero) {
-			j.imprimir();
+
+	try {
+		archivo = new FileWriter("porteros.dat");
+		impresor = new PrintWriter(archivo);
+		for (Jugador jugador : jugadores) {
+			if (jugador instanceof Portero) {
+				jugador.imprimir();
+				impresor.println(jugador.toString());
+			}
+		}
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}finally{
+		try {
+			if(archivo != null) {
+				archivo.close();
+			}
+		} catch (Exception e2) {
+			e2.printStackTrace();
 		}
 	}
 	
