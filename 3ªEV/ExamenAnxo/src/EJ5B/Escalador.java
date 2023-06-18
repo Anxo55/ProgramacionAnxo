@@ -26,6 +26,13 @@ public class Escalador extends Ciclista {
         this.gradoRampa = gradoRampa;
     }
 
+    public void calcularTiempoParcial() {
+        super.calcularTiempoParcial();
+        double total = super.getTiempoAcumulado();
+        total += (aceleracionPromedio * 3);
+        super.setTiempoAcumulado(total);
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Escalador [aceleracionPromedio=" + aceleracionPromedio + ", gradoRampa=" + gradoRampa

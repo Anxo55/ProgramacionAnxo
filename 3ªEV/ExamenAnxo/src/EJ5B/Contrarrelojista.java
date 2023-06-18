@@ -16,6 +16,13 @@ public class Contrarrelojista extends Ciclista {
         this.velocidadMaxima = velocidadMaxima;
     }
 
+    public void calcularTiempoParcial() {
+        super.calcularTiempoParcial();
+        double total = super.getTiempoAcumulado();
+        total += (velocidadMaxima * 5);
+        super.setTiempoAcumulado(total);
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Contrarrelojista [velocidadMaxima=" + velocidadMaxima + "]";
@@ -25,10 +32,6 @@ public class Contrarrelojista extends Ciclista {
         return "Es un contrarrelojista";
     }
 
-	public void setTiempoAcumulado(int tiempoAcumulado) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
+
 

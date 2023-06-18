@@ -3,7 +3,7 @@ package EJ5B;
 public abstract class Ciclista {
     private int identificador;
     private String nombre;
-    private int tiempoAcumulado = 0;
+    private double tiempoAcumulado = 0;
     private int posicionGeneral = 0;
 
     public Ciclista(int identificador, String nombre) {
@@ -27,11 +27,11 @@ public abstract class Ciclista {
         this.nombre = nombre;
     }
 
-    public int getTiempoAcumulado() {
+    public double getTiempoAcumulado() {
         return tiempoAcumulado;
     }
 
-    public void setTiempoAcumulado(int tiempoAcumulado) {
+    public void setTiempoAcumulado(Double tiempoAcumulado) {
         this.tiempoAcumulado = tiempoAcumulado;
     }
 
@@ -41,6 +41,10 @@ public abstract class Ciclista {
 
     protected void setPosicionGeneral(int posicionGeneral) {
         posicionGeneral = posicionGeneral;
+    }
+
+    protected void calcularTiempoParcial() {
+        tiempoAcumulado += Math.random() * (20 - 5) + 5;
     }
 
     @Override
@@ -54,4 +58,3 @@ public abstract class Ciclista {
         return "Es un ciclista";
     }
 }
-

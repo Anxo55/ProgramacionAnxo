@@ -10,6 +10,7 @@ public class Velocista extends Ciclista {
         super(identificador, nombre);
         this.potenciaPromedio = potenciaPromedio;
         this.velocidadPromedio = velocidadPromedio;
+
     }
 
     public double getPotenciaPromedio() {
@@ -28,6 +29,13 @@ public class Velocista extends Ciclista {
         this.velocidadPromedio = velocidadPromedio;
     }
 
+    public void calcularTiempoParcial() {
+        super.calcularTiempoParcial();
+        double total = super.getTiempoAcumulado();
+        total += (velocidadPromedio * 4);
+        super.setTiempoAcumulado(total);
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Velocista [potenciaPromedio=" + potenciaPromedio + ", velocidadPromedio="
@@ -39,4 +47,5 @@ public class Velocista extends Ciclista {
     }
 
 }
+
 

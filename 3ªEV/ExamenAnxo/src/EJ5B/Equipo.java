@@ -9,10 +9,9 @@ import java.util.Scanner;
 public class Equipo {
     private String nombre;
     private double totalTiempo = 0;
-    private int posicion=0;
+    private int posicion = 0;
     private String pais;
     private ArrayList<Ciclista> listaCiclistas;
-    public Object getlistaCiclistas;
 
     public Equipo(String nombre, String pais) {
         this.nombre = nombre;
@@ -20,19 +19,13 @@ public class Equipo {
         listaCiclistas = new ArrayList<>();
     }
 
-    
-
     public ArrayList<Ciclista> getListaCiclistas() {
         return listaCiclistas;
     }
 
-
-
     public void setListaCiclistas(ArrayList<Ciclista> listaCiclistas) {
         this.listaCiclistas = listaCiclistas;
     }
-
-
 
     public int getPosicion() {
         return posicion;
@@ -101,28 +94,23 @@ public class Equipo {
         }
     }
 
-    //ordenaPosiciones
-    public void ordenaTiempo(){
-        Collections.sort(listaCiclistas, new Comparator<Ciclista>(){
-            public int compare(Ciclista c1, Ciclista c2 ){
-                return c1.getTiempoAcumulado()- c2.getTiempoAcumulado();
+    // ordenaPosiciones
+    public void ordenaTiempo() {
+        Collections.sort(listaCiclistas, new Comparator<Ciclista>() {
+            public int compare(Ciclista c1, Ciclista c2) {
+                return (int) (c1.getTiempoAcumulado() - c2.getTiempoAcumulado());
             }
 
+        });
+
+        ListIterator<Ciclista> iter = listaCiclistas.listIterator();
+        while (iter.hasNext()) {
+            iter.next().setPosicionGeneral(iter.nextIndex());
+            iter.next();
+
         }
-        );
-        
-    ListIterator<Ciclista> iter= listaCiclistas.listIterator();
-    while(iter.hasNext()){
-       iter.next().setPosicionGeneral(iter.nextIndex());
-        iter.next();
-    
+
     }
-    
-    }
-
-
-
-
 
     @Override
     public String toString() {
@@ -133,6 +121,3 @@ public class Equipo {
     }
 
 }
-
-
-
