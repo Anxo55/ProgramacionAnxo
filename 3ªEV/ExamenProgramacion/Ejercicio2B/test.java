@@ -24,28 +24,29 @@ public class test {
         jugadores.add(cuatro);
         jugadores.add(cinco);
 
-        try {
-            archivo = new FileWriter("porteros.dat");
-            impresor = new PrintWriter(archivo);
-            for (Portero portero : porteros) {
-                if (portero instanceof Portero)
-                    portero.imprimir();
-                impresor.println(portero.toString());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (archivo != null) {
-                    archivo.close();
-                }
+         try {
+             archivo = new FileWriter("porteros.dat");
+             impresor = new PrintWriter(archivo);
+             for (Jugador jugador : jugadores) {
+                 if (jugador instanceof Portero)
+                     jugador.imprimir();
+                 impresor.println(jugador.toString());
+             }
+         } catch (Exception e) {
+             e.printStackTrace();
+         } finally {
+             try {
+                 if (archivo != null) {
+                     archivo.close();
+                 }
 
-            } catch (Exception e2) {
-                e2.printStackTrace();
-            }
-        }
+             } catch (Exception e2) {
+                 e2.printStackTrace();
+             }
+         }
 
     }
     }
+
     
-}
+

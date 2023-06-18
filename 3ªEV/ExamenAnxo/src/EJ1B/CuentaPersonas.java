@@ -7,7 +7,7 @@ public class CuentaPersonas {
 
 	public static Cine uno, dos, tres;
 
-		static boolean corte=true;
+	static boolean corte=true;
 	
 	public static void control() {
 

@@ -1,9 +1,5 @@
 package Ejercicio2B;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-
 public class Portero extends Jugador{
 
     private int golesRecibidos;
@@ -32,6 +28,7 @@ public class Portero extends Jugador{
     public void setPenaltisParados(int penaltisParados) {
         this.penaltisParados = penaltisParados;
     }
+    
     public void imprimir() {
         super.imprimir();
         System.out.println("Goles: "+golesRecibidos);
