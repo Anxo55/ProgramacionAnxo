@@ -28,6 +28,9 @@
          }
          System.out.println("Total: "+total);
      
+
+         //intenté hacer el metodo multable pero no era capaz, hice la interfaz y me falto mostrarlo en cada objeto.
+         
      
     // for (Multable m : multable) {
     //         System.out.println(m);
